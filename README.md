@@ -7,60 +7,88 @@ Sistema web para la gestión de préstamos de libros en una biblioteca virtual. 
 
 <!-- Banner de Tecnologías -->
 <div align="center" style="margin-bottom: 30px;">
-  <div class="row" style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 30px;">
-    <div style="text-align: center;">
-      <img src="https://raw.githubusercontent.com/laravel/art/master/logo-mark/laravel-mark-red.png" alt="Laravel" width="60"/>
-      <div style="font-size: 14px; margin-top: 5px;">Laravel</div>
-    </div>
-    <div style="text-align: center;">
-      <img src="https://www.php.net/images/logos/new-php-logo.svg" alt="PHP" width="60"/>
-      <div style="font-size: 14px; margin-top: 5px;">PHP</div>
-    </div>
-    <div style="text-align: center;">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/6/68/Oracle_SQL_Developer_logo.svg" alt="Oracle" width="60"/>
-      <div style="font-size: 14px; margin-top: 5px;">Oracle DB</div>
-    </div>
-    <div style="text-align: center;">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Sql_data_base_with_logo.png" alt="PL/SQL" width="60"/>
-      <div style="font-size: 14px; margin-top: 5px;">PL/SQL</div>
-    </div>
-    <div style="text-align: center;">
-      <img src="https://raw.githubusercontent.com/composer/logos/main/logo.svg" alt="Composer" width="60"/>
-      <div style="font-size: 14px; margin-top: 5px;">Composer</div>
-    </div>
-    <div style="text-align: center;">
-      <img src="https://nodejs.org/static/images/logo.svg" alt="Node.js" width="60"/>
-      <div style="font-size: 14px; margin-top: 5px;">Node.js</div>
-    </div>
-    <div style="text-align: center;">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/d/db/Npm-logo.svg" alt="npm" width="60"/>
-      <div style="font-size: 14px; margin-top: 5px;">npm</div>
-    </div>
-    <div style="text-align: center;">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/9/96/Blade_logo.png" alt="Blade" width="60"/>
-      <div style="font-size: 14px; margin-top: 5px;">Blade</div>
-    </div>
-    <div style="text-align: center;">
-      <img src="https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo-shadow.png" alt="Bootstrap" width="60"/>
-      <div style="font-size: 14px; margin-top: 5px;">Bootstrap</div>
-    </div>
-    <div style="text-align: center;">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/6/62/CSS3_logo.svg" alt="CSS3" width="60"/>
-      <div style="font-size: 14px; margin-top: 5px;">CSS3</div>
-    </div>
-    <div style="text-align: center;">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="JavaScript" width="60"/>
-      <div style="font-size: 14px; margin-top: 5px;">JavaScript</div>
-    </div>
-    <div style="text-align: center;">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg" alt="TypeScript" width="60"/>
-      <div style="font-size: 14px; margin-top: 5px;">TypeScript</div>
-    </div>
-    <div style="text-align: center;">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Html5_logo_and_wordmark.svg" alt="HTML5" width="60"/>
-      <div style="font-size: 14px; margin-top: 5px;">HTML5</div>
-    </div>
-  </div>
+  <table style="border: none; background: none;">
+    <tr>
+      <td align="center" style="padding: 20px;">
+        <a href="https://laravel.com/" target="_blank">
+          <img src="https://raw.githubusercontent.com/laravel/art/master/logo-mark/laravel-mark-red.png" alt="Laravel" width="70"/>
+          <div style="font-size: 15px; margin-top: 8px; font-weight: bold; color: #ff2d20;">Laravel</div>
+        </a>
+      </td>
+      <td align="center" style="padding: 20px;">
+        <a href="https://www.php.net/" target="_blank">
+          <img src="https://www.php.net/images/logos/new-php-logo.svg" alt="PHP" width="60"/>
+          <div style="font-size: 14px; margin-top: 5px;">PHP</div>
+        </a>
+      </td>
+      <td align="center" style="padding: 20px;">
+        <a href="https://www.oracle.com/database/" target="_blank">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/68/Oracle_SQL_Developer_logo.svg" alt="Oracle" width="60"/>
+          <div style="font-size: 14px; margin-top: 5px;">Oracle DB</div>
+        </a>
+      </td>
+      <td align="center" style="padding: 20px;">
+        <a href="https://www.oracle.com/database/technologies/appdev/plsql.html" target="_blank">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Sql_data_base_with_logo.png" alt="PL/SQL" width="60"/>
+          <div style="font-size: 14px; margin-top: 5px;">PL/SQL</div>
+        </a>
+      </td>
+      <td align="center" style="padding: 20px;">
+        <a href="https://getcomposer.org/" target="_blank">
+          <img src="https://raw.githubusercontent.com/composer/logos/main/logo.svg" alt="Composer" width="60"/>
+          <div style="font-size: 14px; margin-top: 5px;">Composer</div>
+        </a>
+      </td>
+      <td align="center" style="padding: 20px;">
+        <a href="https://nodejs.org/" target="_blank">
+          <img src="https://nodejs.org/static/images/logo.svg" alt="Node.js" width="60"/>
+          <div style="font-size: 14px; margin-top: 5px;">Node.js</div>
+        </a>
+      </td>
+      <td align="center" style="padding: 20px;">
+        <a href="https://www.npmjs.com/" target="_blank">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/d/db/Npm-logo.svg" alt="npm" width="60"/>
+          <div style="font-size: 14px; margin-top: 5px;">npm</div>
+        </a>
+      </td>
+      <td align="center" style="padding: 20px;">
+        <a href="https://laravel.com/docs/10.x/blade" target="_blank">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/9/96/Blade_logo.png" alt="Blade" width="60"/>
+          <div style="font-size: 14px; margin-top: 5px;">Blade</div>
+        </a>
+      </td>
+      <td align="center" style="padding: 20px;">
+        <a href="https://getbootstrap.com/" target="_blank">
+          <img src="https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo-shadow.png" alt="Bootstrap" width="60"/>
+          <div style="font-size: 14px; margin-top: 5px;">Bootstrap</div>
+        </a>
+      </td>
+      <td align="center" style="padding: 20px;">
+        <a href="https://developer.mozilla.org/docs/Web/CSS" target="_blank">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/62/CSS3_logo.svg" alt="CSS3" width="60"/>
+          <div style="font-size: 14px; margin-top: 5px;">CSS3</div>
+        </a>
+      </td>
+      <td align="center" style="padding: 20px;">
+        <a href="https://developer.mozilla.org/docs/Web/JavaScript" target="_blank">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="JavaScript" width="60"/>
+          <div style="font-size: 14px; margin-top: 5px;">JavaScript</div>
+        </a>
+      </td>
+      <td align="center" style="padding: 20px;">
+        <a href="https://www.typescriptlang.org/" target="_blank">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg" alt="TypeScript" width="60"/>
+          <div style="font-size: 14px; margin-top: 5px;">TypeScript</div>
+        </a>
+      </td>
+      <td align="center" style="padding: 20px;">
+        <a href="https://developer.mozilla.org/docs/Web/HTML" target="_blank">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Html5_logo_and_wordmark.svg" alt="HTML5" width="60"/>
+          <div style="font-size: 14px; margin-top: 5px;">HTML5</div>
+        </a>
+      </td>
+    </tr>
+  </table>
 </div>
 
 | Componente   | Tecnología         |

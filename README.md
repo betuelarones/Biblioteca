@@ -5,23 +5,68 @@ Sistema web para la gestión de préstamos de libros en una biblioteca virtual. 
 
 ---
 
-## Tecnologías Utilizadas
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/laravel/art/master/logo-mark/laravel-mark-red.png" alt="Laravel" width="60" style="margin-right: 20px;"/>
-  <img src="https://www.php.net/images/logos/new-php-logo.svg" alt="PHP" width="60" style="margin-right: 20px;"/>
-  <img src="https://upload.wikimedia.org/wikipedia/commons/6/68/Oracle_SQL_Developer_logo.svg" alt="Oracle" width="60" style="margin-right: 20px;"/>
-  <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Sql_data_base_with_logo.png" alt="PL/SQL" width="60" style="margin-right: 20px;"/>
-  <img src="https://raw.githubusercontent.com/composer/logos/main/logo.svg" alt="Composer" width="60" style="margin-right: 20px;"/>
-  <img src="https://nodejs.org/static/images/logo.svg" alt="Node.js" width="60" style="margin-right: 20px;"/>
-  <img src="https://upload.wikimedia.org/wikipedia/commons/d/db/Npm-logo.svg" alt="npm" width="60" style="margin-right: 20px;"/>
-  <img src="https://upload.wikimedia.org/wikipedia/commons/9/96/Blade_logo.png" alt="Blade" width="60" style="margin-right: 20px;"/>
-</p>
+<!-- Banner de Tecnologías -->
+<div align="center" style="margin-bottom: 30px;">
+  <div class="row" style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 30px;">
+    <div style="text-align: center;">
+      <img src="https://raw.githubusercontent.com/laravel/art/master/logo-mark/laravel-mark-red.png" alt="Laravel" width="60"/>
+      <div style="font-size: 14px; margin-top: 5px;">Laravel</div>
+    </div>
+    <div style="text-align: center;">
+      <img src="https://www.php.net/images/logos/new-php-logo.svg" alt="PHP" width="60"/>
+      <div style="font-size: 14px; margin-top: 5px;">PHP</div>
+    </div>
+    <div style="text-align: center;">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/68/Oracle_SQL_Developer_logo.svg" alt="Oracle" width="60"/>
+      <div style="font-size: 14px; margin-top: 5px;">Oracle DB</div>
+    </div>
+    <div style="text-align: center;">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Sql_data_base_with_logo.png" alt="PL/SQL" width="60"/>
+      <div style="font-size: 14px; margin-top: 5px;">PL/SQL</div>
+    </div>
+    <div style="text-align: center;">
+      <img src="https://raw.githubusercontent.com/composer/logos/main/logo.svg" alt="Composer" width="60"/>
+      <div style="font-size: 14px; margin-top: 5px;">Composer</div>
+    </div>
+    <div style="text-align: center;">
+      <img src="https://nodejs.org/static/images/logo.svg" alt="Node.js" width="60"/>
+      <div style="font-size: 14px; margin-top: 5px;">Node.js</div>
+    </div>
+    <div style="text-align: center;">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/d/db/Npm-logo.svg" alt="npm" width="60"/>
+      <div style="font-size: 14px; margin-top: 5px;">npm</div>
+    </div>
+    <div style="text-align: center;">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/9/96/Blade_logo.png" alt="Blade" width="60"/>
+      <div style="font-size: 14px; margin-top: 5px;">Blade</div>
+    </div>
+    <div style="text-align: center;">
+      <img src="https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo-shadow.png" alt="Bootstrap" width="60"/>
+      <div style="font-size: 14px; margin-top: 5px;">Bootstrap</div>
+    </div>
+    <div style="text-align: center;">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/62/CSS3_logo.svg" alt="CSS3" width="60"/>
+      <div style="font-size: 14px; margin-top: 5px;">CSS3</div>
+    </div>
+    <div style="text-align: center;">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="JavaScript" width="60"/>
+      <div style="font-size: 14px; margin-top: 5px;">JavaScript</div>
+    </div>
+    <div style="text-align: center;">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg" alt="TypeScript" width="60"/>
+      <div style="font-size: 14px; margin-top: 5px;">TypeScript</div>
+    </div>
+    <div style="text-align: center;">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Html5_logo_and_wordmark.svg" alt="HTML5" width="60"/>
+      <div style="font-size: 14px; margin-top: 5px;">HTML5</div>
+    </div>
+  </div>
+</div>
 
 | Componente   | Tecnología         |
 |-------------|-------------------|
 | Backend     | Laravel (PHP)     |
-| Frontend    | Blade (Laravel)   |
+| Frontend    | Blade, Bootstrap, CSS3, HTML5, JavaScript, TypeScript |
 | Base de Datos | Oracle Database  |
 | Lógica BD   | PL/SQL (Procedimientos, Triggers) |
 
@@ -33,28 +78,6 @@ Sistema web para la gestión de préstamos de libros en una biblioteca virtual. 
 - Oracle Database (19c o superior recomendado)
 - Extensión OCI8 para PHP
 - Node.js y npm (para assets frontend)
-
----
-
-## Instalación de Extensión OCI8 para PHP
-
-### Windows
-1. Descarga la DLL de OCI8 compatible con tu versión de PHP desde [pecl.php.net/package/oci8](https://pecl.php.net/package/oci8).
-2. Copia la DLL a la carpeta `ext` de tu instalación de PHP.
-3. Agrega en tu `php.ini`:
-   ```ini
-   extension=oci8_12c.dll  ; o la versión que corresponda
-   ; Para Oracle Instant Client:
-   ; extension=oci8_19.dll
-   ```
-4. Reinicia el servidor web o PHP-FPM.
-
-### Linux
-```bash
-sudo apt-get install php-oci8
-# o para versiones específicas
-sudo apt-get install php8.1-oci8
-```
 
 ---
 
@@ -364,12 +387,5 @@ END;
 ```
 ---
 
-## Notas
-- Asegúrate de tener la extensión OCI8 correctamente instalada y configurada.
-- Todos los procedimientos almacenados y triggers están en el script SQL incluido.
-- El sistema está preparado para ser desplegado en entornos Windows y Linux.
-
----
-
 ## Créditos
-Desarrollado por: [Tu Nombre]
+Desarrollado por: Jesús

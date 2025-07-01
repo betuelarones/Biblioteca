@@ -113,7 +113,7 @@ Sistema web para la gestión de préstamos de libros en una biblioteca virtual. 
 
 1. **Clona el repositorio:**
    ```bash
-   git clone <url-del-repo>
+   git clone https://github.com/betuelarones/Biblioteca.git
    cd Biblioteca
    ```
 2. **Instala dependencias PHP:**

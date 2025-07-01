@@ -32,7 +32,7 @@ class CategoriaController extends Controller
             abort(403, 'No autorizado');
         }
         $pdo = DB::connection()->getPdo();
-        $stmt = $pdo->prepare("BEGIN crear_categoria(:nombre, :mensaje); END;");
+        $stmt = $pdo->prepare("BEGIN SP_REGISTRAR_CATEGORIA(:nombre, :mensaje); END;");
         $nombre = $request->input('nombre');
         $mensaje = '';
         $stmt->bindParam(':nombre', $nombre);
@@ -46,7 +46,7 @@ class CategoriaController extends Controller
         if (session('rol_id') != 1) {
             abort(403, 'No autorizado');
         }
-        $categoria = DB::table('categorias')->where('id', $id)->first();
+        $categoria = DB::table('categorias')->where('id_categoria', $id)->first();
         return view('categorias.edit', compact('categoria'));
     }
 
@@ -56,10 +56,10 @@ class CategoriaController extends Controller
             abort(403, 'No autorizado');
         }
         $pdo = DB::connection()->getPdo();
-        $stmt = $pdo->prepare("BEGIN actualizar_categoria(:id, :nombre, :mensaje); END;");
+        $stmt = $pdo->prepare("BEGIN SP_EDITAR_CATEGORIA(:id_categoria, :nombre, :mensaje); END;");
         $nombre = $request->input('nombre');
         $mensaje = '';
-        $stmt->bindParam(':id', $id);
+        $stmt->bindParam(':id_categoria', $id);
         $stmt->bindParam(':nombre', $nombre);
         $stmt->bindParam(':mensaje', $mensaje, PDO::PARAM_STR | PDO::PARAM_INPUT_OUTPUT, 4000);
         $stmt->execute();
@@ -72,9 +72,9 @@ class CategoriaController extends Controller
             abort(403, 'No autorizado');
         }
         $pdo = DB::connection()->getPdo();
-        $stmt = $pdo->prepare("BEGIN eliminar_categoria(:id, :mensaje); END;");
+        $stmt = $pdo->prepare("BEGIN SP_ELIMINAR_CATEGORIA(:id_categoria, :mensaje); END;");
         $mensaje = '';
-        $stmt->bindParam(':id', $id);
+        $stmt->bindParam(':id_categoria', $id);
         $stmt->bindParam(':mensaje', $mensaje, PDO::PARAM_STR | PDO::PARAM_INPUT_OUTPUT, 4000);
         $stmt->execute();
         return redirect()->route('categorias.index')->with('success', $mensaje);

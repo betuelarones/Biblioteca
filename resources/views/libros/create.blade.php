@@ -14,7 +14,7 @@
             <select name="autor_id" class="form-select" required>
                 <option value="">Selecciona un autor</option>
                 @foreach($autores as $autor)
-                    <option value="{{ $autor->id }}">{{ $autor->nombre }}</option>
+                    <option value="{{ $autor->id_autor }}">{{ $autor->nombre }}</option>
                 @endforeach
             </select>
         </div>
@@ -23,7 +23,7 @@
             <select name="categoria_id" class="form-select" required>
                 <option value="">Selecciona una categoría</option>
                 @foreach($categorias as $categoria)
-                    <option value="{{ $categoria->id }}">{{ $categoria->nombre }}</option>
+                    <option value="{{ $categoria->id_categoria }}">{{ $categoria->nombre }}</option>
                 @endforeach
             </select>
         </div>

@@ -1,102 +1,16 @@
 # Sistema de Préstamo de Libros - Biblioteca Virtual
 
 ## Descripción
-Sistema web para la gestión de préstamos de libros en una biblioteca virtual. Permite la administración de usuarios (con roles de Bibliotecario y Usuario), libros, autores y categorías. Toda la lógica de negocio se implementa mediante procedimientos almacenados y triggers en Oracle Database.
+Sistema web para la gestión de préstamos de libros en una biblioteca virtual. Permite la administración de usuarios (con roles de Bibliotecario y Usuario), libros, autores y categorías. Toda la lógica de negocio se implementa mediante procedimientos almacenados en Oracle Database.
 
 ---
 
-<!-- Banner de Tecnologías -->
-<div align="center" style="margin-bottom: 30px;">
-  <table style="border: none; background: none;">
-    <tr>
-      <td align="center" style="padding: 20px;">
-        <a href="https://laravel.com/" target="_blank">
-          <img src="https://raw.githubusercontent.com/laravel/art/master/logo-mark/laravel-mark-red.png" alt="Laravel" width="70"/>
-          <div style="font-size: 15px; margin-top: 8px; font-weight: bold; color: #ff2d20;">Laravel</div>
-        </a>
-      </td>
-      <td align="center" style="padding: 20px;">
-        <a href="https://www.php.net/" target="_blank">
-          <img src="https://www.php.net/images/logos/new-php-logo.svg" alt="PHP" width="60"/>
-          <div style="font-size: 14px; margin-top: 5px;">PHP</div>
-        </a>
-      </td>
-      <td align="center" style="padding: 20px;">
-        <a href="https://www.oracle.com/database/" target="_blank">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/6/68/Oracle_SQL_Developer_logo.svg" alt="Oracle" width="60"/>
-          <div style="font-size: 14px; margin-top: 5px;">Oracle DB</div>
-        </a>
-      </td>
-      <td align="center" style="padding: 20px;">
-        <a href="https://www.oracle.com/database/technologies/appdev/plsql.html" target="_blank">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Sql_data_base_with_logo.png" alt="PL/SQL" width="60"/>
-          <div style="font-size: 14px; margin-top: 5px;">PL/SQL</div>
-        </a>
-      </td>
-      <td align="center" style="padding: 20px;">
-        <a href="https://getcomposer.org/" target="_blank">
-          <img src="https://raw.githubusercontent.com/composer/logos/main/logo.svg" alt="Composer" width="60"/>
-          <div style="font-size: 14px; margin-top: 5px;">Composer</div>
-        </a>
-      </td>
-      <td align="center" style="padding: 20px;">
-        <a href="https://nodejs.org/" target="_blank">
-          <img src="https://nodejs.org/static/images/logo.svg" alt="Node.js" width="60"/>
-          <div style="font-size: 14px; margin-top: 5px;">Node.js</div>
-        </a>
-      </td>
-      <td align="center" style="padding: 20px;">
-        <a href="https://www.npmjs.com/" target="_blank">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/d/db/Npm-logo.svg" alt="npm" width="60"/>
-          <div style="font-size: 14px; margin-top: 5px;">npm</div>
-        </a>
-      </td>
-      <td align="center" style="padding: 20px;">
-        <a href="https://laravel.com/docs/10.x/blade" target="_blank">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/9/96/Blade_logo.png" alt="Blade" width="60"/>
-          <div style="font-size: 14px; margin-top: 5px;">Blade</div>
-        </a>
-      </td>
-      <td align="center" style="padding: 20px;">
-        <a href="https://getbootstrap.com/" target="_blank">
-          <img src="https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo-shadow.png" alt="Bootstrap" width="60"/>
-          <div style="font-size: 14px; margin-top: 5px;">Bootstrap</div>
-        </a>
-      </td>
-      <td align="center" style="padding: 20px;">
-        <a href="https://developer.mozilla.org/docs/Web/CSS" target="_blank">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/6/62/CSS3_logo.svg" alt="CSS3" width="60"/>
-          <div style="font-size: 14px; margin-top: 5px;">CSS3</div>
-        </a>
-      </td>
-      <td align="center" style="padding: 20px;">
-        <a href="https://developer.mozilla.org/docs/Web/JavaScript" target="_blank">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="JavaScript" width="60"/>
-          <div style="font-size: 14px; margin-top: 5px;">JavaScript</div>
-        </a>
-      </td>
-      <td align="center" style="padding: 20px;">
-        <a href="https://www.typescriptlang.org/" target="_blank">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg" alt="TypeScript" width="60"/>
-          <div style="font-size: 14px; margin-top: 5px;">TypeScript</div>
-        </a>
-      </td>
-      <td align="center" style="padding: 20px;">
-        <a href="https://developer.mozilla.org/docs/Web/HTML" target="_blank">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Html5_logo_and_wordmark.svg" alt="HTML5" width="60"/>
-          <div style="font-size: 14px; margin-top: 5px;">HTML5</div>
-        </a>
-      </td>
-    </tr>
-  </table>
-</div>
+## Tecnologías Utilizadas
 
-| Componente   | Tecnología         |
-|-------------|-------------------|
-| Backend     | Laravel (PHP)     |
-| Frontend    | Blade, Bootstrap, CSS3, HTML5, JavaScript, TypeScript |
-| Base de Datos | Oracle Database  |
-| Lógica BD   | PL/SQL (Procedimientos, Triggers) |
+- **Backend:** Laravel (PHP)
+- **Base de Datos:** Oracle Database
+- **Frontend:** Blade, Bootstrap, CSS3, HTML5, JavaScript
+- **Gestión de dependencias:** Composer, npm
 
 ---
 
@@ -130,9 +44,10 @@ Sistema web para la gestión de préstamos de libros en una biblioteca virtual. 
      DB_CONNECTION=oracle
      DB_HOST=localhost
      DB_PORT=1521
-     DB_DATABASE=XE
-     DB_USERNAME=usuario_oracle
-     DB_PASSWORD=tu_password
+     DB_SERVICE_NAME=ORCLCDB.localdomain  # o el nombre de tu servicio
+     DB_DATABASE=XE                      # o el SID si usas uno
+     DB_USERNAME=tu_usuario_oracle
+     DB_PASSWORD=tu_contraseña
      ```
 5. **Genera la clave de la app:**
    ```bash
@@ -165,8 +80,10 @@ Accede a [http://127.0.0.1:8000](http://127.0.0.1:8000)
 
 ---
 
-## Script SQL Principal (fragmento)
+## Script SQL Principal (Tablas y Procedimientos)
+
 ```sql
+-- TABLAS PRINCIPALES
 CREATE TABLE ROLES (
     ID_ROL NUMBER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     NOMBRE VARCHAR2(30) UNIQUE NOT NULL
@@ -200,19 +117,6 @@ CREATE TABLE LIBROS (
     CONSTRAINT FK_LIBRO_AUTOR FOREIGN KEY (ID_AUTOR) REFERENCES AUTORES(ID_AUTOR),
     CONSTRAINT FK_LIBRO_CATEGORIA FOREIGN KEY (ID_CATEGORIA) REFERENCES CATEGORIAS(ID_CATEGORIA)
 );
-CREATE OR REPLACE PROCEDURE SP_EDITAR_AUTOR (
-    P_ID_AUTOR IN NUMBER,
-    P_NOMBRE IN VARCHAR2,
-    P_MENSAJE OUT VARCHAR2
-) AS
-BEGIN
-    UPDATE AUTORES SET NOMBRE = P_NOMBRE WHERE ID_AUTOR = P_ID_AUTOR;
-    P_MENSAJE := 'Autor actualizado correctamente.';
-EXCEPTION
-    WHEN OTHERS THEN
-        P_MENSAJE := 'Error: ' || SQLERRM;
-END;
-/
 ```
 
 ---
@@ -314,10 +218,7 @@ EXCEPTION
 END;
 /
 
--- =============================
--- PROCEDIMIENTOS Y FUNCIONES CATEGORIAS Y AUTORES
--- =============================
-
+-- CATEGORIAS
 CREATE OR REPLACE PROCEDURE SP_REGISTRAR_CATEGORIA (
     P_NOMBRE IN VARCHAR2,
     P_MENSAJE OUT VARCHAR2
@@ -343,6 +244,34 @@ BEGIN
 END;
 /
 
+CREATE OR REPLACE PROCEDURE SP_EDITAR_CATEGORIA (
+    P_ID_CATEGORIA IN NUMBER,
+    P_NOMBRE IN VARCHAR2,
+    P_MENSAJE OUT VARCHAR2
+) AS
+BEGIN
+    UPDATE CATEGORIAS SET NOMBRE = P_NOMBRE WHERE ID_CATEGORIA = P_ID_CATEGORIA;
+    P_MENSAJE := 'Categoría actualizada correctamente.';
+EXCEPTION
+    WHEN OTHERS THEN
+        P_MENSAJE := 'Error: ' || SQLERRM;
+END;
+/
+
+CREATE OR REPLACE PROCEDURE SP_ELIMINAR_CATEGORIA (
+    P_ID_CATEGORIA IN NUMBER,
+    P_MENSAJE OUT VARCHAR2
+) AS
+BEGIN
+    DELETE FROM CATEGORIAS WHERE ID_CATEGORIA = P_ID_CATEGORIA;
+    P_MENSAJE := 'Categoría eliminada correctamente.';
+EXCEPTION
+    WHEN OTHERS THEN
+        P_MENSAJE := 'Error: ' || SQLERRM;
+END;
+/
+
+-- AUTORES
 CREATE OR REPLACE PROCEDURE SP_REGISTRAR_AUTOR (
     P_NOMBRE IN VARCHAR2,
     P_MENSAJE OUT VARCHAR2
@@ -362,10 +291,34 @@ BEGIN
 END;
 /
 
--- =============================
--- PROCEDIMIENTOS Y FUNCIONES LIBROS
--- =============================
+CREATE OR REPLACE PROCEDURE SP_EDITAR_AUTOR (
+    P_ID_AUTOR IN NUMBER,
+    P_NOMBRE IN VARCHAR2,
+    P_MENSAJE OUT VARCHAR2
+) AS
+BEGIN
+    UPDATE AUTORES SET NOMBRE = P_NOMBRE WHERE ID_AUTOR = P_ID_AUTOR;
+    P_MENSAJE := 'Autor actualizado correctamente.';
+EXCEPTION
+    WHEN OTHERS THEN
+        P_MENSAJE := 'Error: ' || SQLERRM;
+END;
+/
 
+CREATE OR REPLACE PROCEDURE SP_ELIMINAR_AUTOR (
+    P_ID_AUTOR IN NUMBER,
+    P_MENSAJE OUT VARCHAR2
+) AS
+BEGIN
+    DELETE FROM AUTORES WHERE ID_AUTOR = P_ID_AUTOR;
+    P_MENSAJE := 'Autor eliminado correctamente.';
+EXCEPTION
+    WHEN OTHERS THEN
+        P_MENSAJE := 'Error: ' || SQLERRM;
+END;
+/
+
+-- LIBROS
 CREATE OR REPLACE PROCEDURE SP_REGISTRAR_LIBRO (
     P_TITULO IN VARCHAR2,
     P_ID_AUTOR IN NUMBER,
@@ -439,6 +392,33 @@ EXCEPTION
 END;
 /
 ```
+
+---
+
+## Scripts de Prueba (Datos de ejemplo)
+
+```sql
+-- Insertar roles
+INSERT INTO ROLES (NOMBRE) VALUES ('Bibliotecario');
+INSERT INTO ROLES (NOMBRE) VALUES ('Usuario');
+
+-- Insertar usuarios
+INSERT INTO USUARIOS (NOMBRE, CORREO, PASSWORD, ROL_ID) VALUES ('Admin', 'admin@biblioteca.com', 'admin123', 1);
+INSERT INTO USUARIOS (NOMBRE, CORREO, PASSWORD, ROL_ID) VALUES ('Juan', 'juan@correo.com', 'juan123', 2);
+
+-- Insertar autores
+INSERT INTO AUTORES (NOMBRE) VALUES ('Gabriel García Márquez');
+INSERT INTO AUTORES (NOMBRE) VALUES ('Isabel Allende');
+
+-- Insertar categorías
+INSERT INTO CATEGORIAS (NOMBRE) VALUES ('Novela');
+INSERT INTO CATEGORIAS (NOMBRE) VALUES ('Ciencia Ficción');
+
+-- Insertar libros
+INSERT INTO LIBROS (TITULO, ID_AUTOR, ID_CATEGORIA, ANIO_PUBLICACION) VALUES ('Cien años de soledad', 1, 1, 1967);
+INSERT INTO LIBROS (TITULO, ID_AUTOR, ID_CATEGORIA, ANIO_PUBLICACION) VALUES ('La casa de los espíritus', 2, 1, 1982);
+```
+
 ---
 
 ## Créditos

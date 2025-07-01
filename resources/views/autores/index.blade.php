@@ -22,11 +22,16 @@
         <tbody>
             @foreach($autores as $autor)
                 <tr>
-                    <td>{{ $autor->id }}</td>
+                    <td>{{ $autor->id_autor }}</td>
                     <td>{{ $autor->nombre }}</td>
                     @if(session('rol_id') == 1)
                         <td>
-                            <a href="{{ url('/autores/'.$autor->id.'/edit') }}" class="btn btn-warning btn-sm">Editar</a>
+                            <a href="{{ url('/autores/'.$autor->id_autor.'/edit') }}" class="btn btn-warning btn-sm">Editar</a>
+                            <form action="{{ route('autores.destroy', $autor->id_autor) }}" method="POST" style="display:inline-block;">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('¿Seguro de eliminar?')">Eliminar</button>
+                            </form>
                         </td>
                     @endif
                 </tr>

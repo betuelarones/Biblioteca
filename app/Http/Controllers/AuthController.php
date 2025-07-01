@@ -47,7 +47,7 @@ class AuthController extends Controller
         $correo = $request->input('correo');
         $password = $request->input('password');
         $pdo = DB::connection()->getPdo();
-        $sql = "BEGIN :resultado := autenticar_usuario(:correo, :password); END;";
+        $sql = "BEGIN :resultado := FN_LOGIN_USUARIO(:correo, :password); END;";
         $resultado = null;
         $stmt = $pdo->prepare($sql);
         $stmt->bindParam(':correo', $correo);
@@ -55,8 +55,8 @@ class AuthController extends Controller
         $stmt->bindParam(':resultado', $resultado, PDO::PARAM_INT | PDO::PARAM_INPUT_OUTPUT, 32);
         $stmt->execute();
         if ($resultado > 0) {
-            $usuario = DB::selectOne('SELECT * FROM usuarios WHERE id = ?', [$resultado]);
-            session(['usuario_id' => $usuario->id, 'rol_id' => $usuario->rol_id]);
+            $usuario = DB::selectOne('SELECT * FROM usuarios WHERE id_usuario = ?', [$resultado]);
+            session(['usuario_id' => $usuario->id_usuario, 'rol_id' => $usuario->rol_id]);
             return redirect()->route('libros.index')->with('success', 'Bienvenido');
         } else {
             return redirect()->back()->withInput()->with('error', 'Credenciales incorrectas');

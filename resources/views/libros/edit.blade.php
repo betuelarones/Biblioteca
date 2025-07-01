@@ -3,7 +3,7 @@
 @section('content')
 <div class="container mt-4">
     <h2>Editar Libro</h2>
-    <form action="{{ url('/libros/' . $libro->id) }}" method="POST" class="mt-3">
+    <form action="{{ url('/libros/' . $libro->id_libro) }}" method="POST" class="mt-3">
         @csrf
         @method('PUT')
         <div class="mb-3">
@@ -14,7 +14,7 @@
             <label class="form-label">Autor:</label>
             <select name="autor_id" class="form-select" required>
                 @foreach($autores as $autor)
-                    <option value="{{ $autor->id }}" {{ $libro->autor_id == $autor->id ? 'selected' : '' }}>{{ $autor->nombre }}</option>
+                    <option value="{{ $autor->id_autor }}" {{ $libro->id_autor == $autor->id_autor ? 'selected' : '' }}>{{ $autor->nombre }}</option>
                 @endforeach
             </select>
         </div>
@@ -22,7 +22,7 @@
             <label class="form-label">Categoría:</label>
             <select name="categoria_id" class="form-select" required>
                 @foreach($categorias as $categoria)
-                    <option value="{{ $categoria->id }}" {{ $libro->categoria_id == $categoria->id ? 'selected' : '' }}>{{ $categoria->nombre }}</option>
+                    <option value="{{ $categoria->id_categoria }}" {{ $libro->id_categoria == $categoria->id_categoria ? 'selected' : '' }}>{{ $categoria->nombre }}</option>
                 @endforeach
             </select>
         </div>

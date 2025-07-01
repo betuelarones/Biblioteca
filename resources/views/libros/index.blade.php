@@ -30,8 +30,8 @@
                     <td>{{ $libro->anio_publicacion }}</td>
                     @if(session('rol_id') == 1)
                         <td>
-                            <a href="{{ url('/libros/'.$libro->id.'/edit') }}" class="btn btn-warning btn-sm">Editar</a>
-                            <form action="{{ route('libros.destroy', $libro->id) }}" method="POST" style="display:inline-block;">
+                            <a href="{{ url('/libros/'.$libro->id_libro.'/edit') }}" class="btn btn-warning btn-sm">Editar</a>
+                            <form action="{{ route('libros.destroy', $libro->id_libro) }}" method="POST" style="display:inline-block;">
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('¿Seguro de eliminar?')">Eliminar</button>

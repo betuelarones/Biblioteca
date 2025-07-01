@@ -46,7 +46,7 @@ class AutorController extends Controller
         if (session('rol_id') != 1) {
             abort(403, 'No autorizado');
         }
-        $autor = DB::table('autores')->where('id', $id)->first();
+        $autor = DB::table('autores')->where('id_autor', $id)->first();
         return view('autores.edit', compact('autor'));
     }
 
@@ -56,10 +56,10 @@ class AutorController extends Controller
             abort(403, 'No autorizado');
         }
         $pdo = DB::connection()->getPdo();
-        $stmt = $pdo->prepare("BEGIN actualizar_autor(:id, :nombre, :mensaje); END;");
+        $stmt = $pdo->prepare("BEGIN SP_EDITAR_AUTOR(:id_autor, :nombre, :mensaje); END;");
         $nombre = $request->input('nombre');
         $mensaje = '';
-        $stmt->bindParam(':id', $id);
+        $stmt->bindParam(':id_autor', $id);
         $stmt->bindParam(':nombre', $nombre);
         $stmt->bindParam(':mensaje', $mensaje, PDO::PARAM_STR | PDO::PARAM_INPUT_OUTPUT, 4000);
         $stmt->execute();
@@ -72,9 +72,9 @@ class AutorController extends Controller
             abort(403, 'No autorizado');
         }
         $pdo = DB::connection()->getPdo();
-        $stmt = $pdo->prepare("BEGIN eliminar_autor(:id, :mensaje); END;");
+        $stmt = $pdo->prepare("BEGIN SP_ELIMINAR_AUTOR(:id_autor, :mensaje); END;");
         $mensaje = '';
-        $stmt->bindParam(':id', $id);
+        $stmt->bindParam(':id_autor', $id);
         $stmt->bindParam(':mensaje', $mensaje, PDO::PARAM_STR | PDO::PARAM_INPUT_OUTPUT, 4000);
         $stmt->execute();
         return redirect()->route('autores.index')->with('success', $mensaje);

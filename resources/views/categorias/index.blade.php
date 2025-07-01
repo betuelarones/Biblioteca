@@ -22,11 +22,16 @@
         <tbody>
             @foreach($categorias as $categoria)
                 <tr>
-                    <td>{{ $categoria->id }}</td>
+                    <td>{{ $categoria->id_categoria }}</td>
                     <td>{{ $categoria->nombre }}</td>
                     @if(session('rol_id') == 1)
                         <td>
-                            <a href="{{ url('/categorias/'.$categoria->id.'/edit') }}" class="btn btn-warning btn-sm">Editar</a>
+                            <a href="{{ url('/categorias/'.$categoria->id_categoria.'/edit') }}" class="btn btn-warning btn-sm">Editar</a>
+                            <form action="{{ route('categorias.destroy', $categoria->id_categoria) }}" method="POST" style="display:inline-block;">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('¿Seguro de eliminar?')">Eliminar</button>
+                            </form>
                         </td>
                     @endif
                 </tr>

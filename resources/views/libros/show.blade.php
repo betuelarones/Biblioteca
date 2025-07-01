@@ -13,7 +13,7 @@
         </div>
         <div class="card-footer">
             @if(session('rol_id') == 1)
-                <a href="{{ route('libros.edit', $libro->id) }}" class="btn btn-warning">Editar</a>
+                <a href="{{ route('libros.edit', $libro->id_libro) }}" class="btn btn-warning">Editar</a>
             @endif
             <a href="{{ route('libros.index') }}" class="btn btn-secondary">Volver a la lista</a>
         </div>

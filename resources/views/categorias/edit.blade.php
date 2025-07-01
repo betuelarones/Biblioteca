@@ -3,7 +3,7 @@
 @section('content')
 <div class="container mt-4">
     <h2>Editar Categoría</h2>
-    <form action="{{ url('/categorias/' . ($categoria->ID ?? $categoria->id)) }}" method="POST" class="mt-3">
+    <form action="{{ url('/categorias/' . ($categoria->ID_CATEGORIA ?? $categoria->id_categoria)) }}" method="POST" class="mt-3">
         @csrf
         @method('PUT')
         <div class="mb-3">

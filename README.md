@@ -34,11 +34,7 @@ Sistema web para la gestión de préstamos de libros en una biblioteca virtual. 
    ```bash
    composer install
    ```
-3. **Instala dependencias frontend:**
-   ```bash
-   npm install && npm run build
-   ```
-4. **Configura el archivo `.env`:**
+3. **Configura el archivo `.env`:**
    - Copia `.env.example` a `.env` y edita los datos de conexión a Oracle:
      ```ini
      DB_CONNECTION=oracle
@@ -49,11 +45,11 @@ Sistema web para la gestión de préstamos de libros en una biblioteca virtual. 
      DB_USERNAME=tu_usuario_oracle
      DB_PASSWORD=tu_contraseña
      ```
-5. **Genera la clave de la app:**
+4. **Genera la clave de la app:**
    ```bash
    php artisan key:generate
    ```
-6. **Carga el script de la base de datos en Oracle:**
+5. **Carga el script de la base de datos en Oracle:**
    - Ejecuta el script `script_biblioteca_virtual.sql` en tu herramienta SQL favorita (SQL*Plus, SQL Developer, etc).
    - Opcional: carga datos de prueba con `datos_prueba_biblioteca.sql`.
 
